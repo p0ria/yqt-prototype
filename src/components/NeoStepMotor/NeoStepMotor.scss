@@ -1,0 +1,68 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.NeoStepMotor {
+  width: 80px;
+  height: 80px;
+  @include boxshadow;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  &.active {
+    pointer-events: none;
+    .NeoStepMotor-Overlay2 {
+      animation: rotateAnimation 3s infinite ease-in;
+      @include insetBoxShadow;
+      border: 1px solid white;
+    }
+    .NeoStepMotor-Overlay3 {
+      transform: scale(.8);
+    }
+  }
+  
+  .NeoStepMotor-Overlay1 {
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include boxshadow;
+    border: 1px solid white;
+  }
+
+  .NeoStepMotor-Overlay2 {
+    border-radius: inherit;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    
+  }
+
+  .NeoStepMotor-Overlay3 {
+    border-radius: inherit;
+    @include boxshadow;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: gray;
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

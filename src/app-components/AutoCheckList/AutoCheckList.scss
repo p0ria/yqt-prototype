@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.AutoCheckList {
+  width: 250px;
+  height: 330px;
+  @include blurBackground;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 25px 20px;
+  
+  .AutoCheckList-Item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 10px;
+    padding-bottom: 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray;
+    }
+    
+    .AutoCheckList-Item__Icon {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      
+      &.passed {
+        color: $color-green;
+      }
+      
+      &.failed {
+        color: $color-red;
+      }
+    }
+    
+    .AutoCheckList-Item__Title {
+      font-size: $ruler * .8;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "./styles/colors";
+@import "styles/sizes";
+@import "styles/fonts/fonts";
+@import "~css-reset-and-normalize/scss/reset-and-normalize";
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, p, input, select, textarea, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, div, p, span {
+  color: $color-text;
+  text-shadow: 1px 1px 1px $color-white;
+}
+
+h1 {
+  font-size: $h1-size;
+}
+h2 {
+  font-size: $h2-size;
+}
+h3 {
+  font-size: $h3-size;
+}
+h4 {
+  font-size: $h4-size;
+}
+h5 {
+  font-size: $h5-size;
+}
+
+
+
+

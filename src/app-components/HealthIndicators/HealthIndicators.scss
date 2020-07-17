@@ -1,0 +1,19 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.HealthIndicators {
+  width: 60px;
+  height: 340px;
+  @include metalBackground;
+  border-radius: 0 $radius $radius 0;
+  @include boxshadow;
+  
+  &.expanded {
+    width: 120px;
+
+    .HealthIndicator:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+    }
+  }
+}

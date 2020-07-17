@@ -1,0 +1,19 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.TestReaders {
+  width: 100%;
+  height: 100%;
+  border-radius: $radius;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to bottom, #2c4268, #26395a);
+  border-radius: $radius;
+
+  .NeoTextSquareButton {
+    margin: 10px 0;
+  }
+}

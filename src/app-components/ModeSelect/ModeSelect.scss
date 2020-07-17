@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.ModeSelect {
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  @include metalBackground;
+  box-shadow: inset -2px -2px 5px $color-white, 
+  inset 2px 2px 5px #a0a0a0;
+  overflow: hidden;
+  position: relative;
+  
+  .ModalSelect-Items {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: left 300ms ease;
+    
+    .ModalSelect-Item {
+      margin: 0 40px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}

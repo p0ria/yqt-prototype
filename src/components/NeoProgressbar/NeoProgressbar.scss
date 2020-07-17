@@ -1,0 +1,21 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.NeoProgressbar {
+  width: 250px;
+  height: 35px;
+  @include insetBoxShadow;
+  border-radius: 20px;
+  border: 1px solid white;
+  position: relative;
+  
+  .NeoProgressbar-Overlay {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    @include boxshadow;
+    border-radius: inherit;
+  }
+}

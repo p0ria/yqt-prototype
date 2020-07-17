@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.NeoUpDownButton {
+  width: 50px;
+  height: 100px;
+  @include boxshadow;
+  border-radius: $radius * 5;
+  border: 1px solid $color-white;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2px;
+  &.busy {
+    pointer-events: none;
+  }
+  
+  button {
+    flex: 1;
+    width: 100%;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: gray;
+    &.active {
+      @include insetBoxShadow;
+    }
+    
+    &.btn-up {
+      border-radius: ($radius * 5) ($radius * 5) 0 0;
+    }
+    
+    &.btn-down {
+      border-radius: 0 0 ($radius * 5) ($radius * 5);
+    }
+  }
+}

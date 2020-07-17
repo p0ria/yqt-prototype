@@ -1,0 +1,27 @@
+@import "../../../styles/sizes";
+@import "../../../styles/colors";
+@import "../../../styles/utilities";
+
+.SetupReadersList {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  
+  .SetupReadersList-Item {
+    width: 100%;
+    height: 20px;
+    margin: 5px;
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.1);;
+    $border-radius: $radius * 3;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    color: gray;;
+    font-size: $ruler * .8;
+    cursor: pointer;
+    &.active {
+      background: $color-reader-selected;
+    }
+  }
+}

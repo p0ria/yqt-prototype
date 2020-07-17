@@ -1,0 +1,10 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.NeoSensor {
+  @include insetBoxShadow;
+  border-radius: 100%;
+  width: 7px;
+  height: 7px;
+}

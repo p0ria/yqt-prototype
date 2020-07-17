@@ -1,0 +1,18 @@
+.ServiceM4 {
+  .NeoSimpleCard {
+    width: 150px;
+    height: 150px;
+    
+    .NeoSimpleCard-Content {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding: 0 20px;
+      
+      .title {
+        margin-right: 20px;
+        color: gray;
+      }
+    }
+  }
+}

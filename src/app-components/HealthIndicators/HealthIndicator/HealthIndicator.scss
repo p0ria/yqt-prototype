@@ -1,0 +1,51 @@
+@import "../../../styles/sizes";
+@import "../../../styles/colors";
+@import "../../../styles/utilities";
+
+.HealthIndicator {
+  height: 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 15px 5px;
+  position: relative;
+  border-bottom: none;
+  transition: all .3s ease;
+  
+  .HealthIndicator-Title {
+    margin-bottom: 5px;
+    font-size: $ruler * .7;
+    opacity: 0;
+  }
+  
+  .HealthIndicator-Content {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    padding-bottom: 10px;
+    transition: all .3s ease;
+    
+    .HealthIndicator-Icon {
+      font-size: $ruler * 1.2;
+    }
+    
+    .NeoSensor {
+      margin: 8px 0 0 8px;
+    }
+  }
+  
+  &.expanded {
+
+    .HealthIndicator-Title {
+      opacity: 1;
+    }
+
+    .HealthIndicator-Content {
+      left: 5px;
+    }
+  }
+}

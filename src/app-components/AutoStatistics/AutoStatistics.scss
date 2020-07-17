@@ -1,0 +1,48 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.AutoStatistics {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  
+  .AutoStatistics-Left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    
+    .done {
+      font-size: $ruler * 2.5;
+    }
+    
+    .total {
+      font-size: $ruler * 1.2;
+      color: $color-text-gray;
+      margin-right: 30px;
+    }
+    
+    .done-total-separator {
+      margin: 0 5px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      font-size: $ruler * .8;
+      color: $color-text-gray;
+      margin-right: 10px;
+      
+      .info-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  .AutoStatistics-Right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px;
+  }
+}

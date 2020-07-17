@@ -1,0 +1,27 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.NeoError {
+  height: 35px;
+  display: flex;
+  margin: 5px 15px;
+  padding: 10px 20px 10px 15px;
+  border-radius: $radius;
+  background: linear-gradient(to bottom, #ff585a, $color-red);
+  @include boxshadow;
+  font-size: $ruler * .8;
+  
+  .NeoError-Icon, .NeoError-Title {
+    color: $color-white;
+    text-shadow: none;
+  }
+  
+  .NeoError-Icon {
+      margin-right: 10px;
+  }
+  
+  .NeoError-Title {
+    
+  }
+}

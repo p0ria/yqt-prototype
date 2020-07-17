@@ -1,0 +1,49 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.NeoTabs {
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  @include boxshadow;
+  border-radius: $radius * 2;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  
+  .NeoTab {
+    width: 150px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    .NeoTab-Icon {
+      margin-right: 5px;
+      font-size: $ruler * 1.1;
+      color: $color-text-gray;
+    }
+    .NeoTab-Title {
+      color: $color-text-gray;
+    }
+    &.active {
+      .NeoTab-Icon {
+        color: $color-primary;
+      }
+      .NeoTab-Title {
+        color: $color-text;
+      }
+    }
+  }
+  
+  .NeoTabs-Overlay {
+    position: absolute;
+    width: 110px;
+    height: 38px;
+    top: 6px;
+    left: 5px;
+    @include insetBoxShadow;
+    background-color: transparent;
+    border-radius: $radius * 2;
+    transition: all .3s ease;
+  }
+}

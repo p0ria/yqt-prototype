@@ -1,0 +1,13 @@
+.ServiceM0{
+  .NeoSimpleCard {
+    width: 150px;
+    height: 150px;
+
+    .NeoSimpleCard-Content {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

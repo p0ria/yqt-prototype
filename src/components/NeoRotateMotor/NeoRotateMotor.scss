@@ -1,0 +1,68 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.NeoRotateMotor {
+  width: 80px;
+  height: 80px;
+  @include boxshadow;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  user-select: none;
+  &.active {
+    .NeoRotateMotor-Overlay2 {
+      animation: rotateAnimation 2s infinite ease-in;
+      @include insetBoxShadow;
+      border: 1px solid white;
+    }
+    .NeoRotateMotor-Overlay3 {
+      transform: scale(.8);
+    }
+  }
+  
+  .NeoRotateMotor-Overlay1 {
+    border-radius: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include boxshadow;
+    border: 1px solid white;
+  }
+
+  .NeoRotateMotor-Overlay2 {
+    border-radius: inherit;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    
+  }
+
+  .NeoRotateMotor-Overlay3 {
+    border-radius: inherit;
+    @include boxshadow;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: gray;
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

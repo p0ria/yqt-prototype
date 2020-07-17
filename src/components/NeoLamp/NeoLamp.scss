@@ -1,0 +1,35 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+$size: 40px;
+$offset: 1px;
+.NeoLamp {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  @include boxshadow;
+  border: 1px solid $color-white;
+  margin: 0 5px;
+  position: relative;
+  
+  .NeoLamp-Overlay {
+    position: absolute;
+    top: $offset;
+    left: $offset;
+    bottom: $offset;
+    right: $offset;
+    border-radius: inherit;
+    overflow: hidden;
+    
+    .NeoLamp-Glass {
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      bottom: -3px;
+      right: 3px;
+      border-radius: inherit;
+      background: rgba(255, 255, 255, .2);
+    }
+  }
+}

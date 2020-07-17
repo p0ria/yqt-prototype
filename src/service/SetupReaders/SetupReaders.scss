@@ -1,0 +1,33 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.SetupReaders {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: $radius;
+  background: #242333;
+  padding: 20px;
+  position: relative;
+
+  .SetupReaders-Header {
+    position: absolute;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+    text-shadow: none;
+    font-weight: 600;
+  }
+  
+  .SetupReaders-Left {
+    flex: 0 0 140px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  
+  .SetupReaders-Right {
+    flex: 1;
+    height: 100%;
+  }
+}

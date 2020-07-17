@@ -1,0 +1,90 @@
+@import "../../styles/colors";
+@import "../../styles/sizes";
+@import "../../styles/utilities";
+
+.HomePage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 110px;
+  
+  .HomePage-Header {
+    grid-row: 1;
+    position: relative;
+
+    .ModeSelect {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .LampList {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+    }
+    
+  }
+  
+  .HomePage-Content {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 60px 1fr 50px;
+    grid-template-rows: 1fr;
+    
+    .HomePage-Content__Left {
+      grid-column: 1;
+      position: relative;;
+      
+      .HealthIndicators {
+        position: absolute;
+        bottom: 45px;
+        left: 0;
+      }
+    }
+    
+    .HomePage-Content__Middle {
+      grid-column: 2;
+      position: relative;
+      overflow: hidden;
+      
+      .mode {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: left .3s ease;
+        &.mode-auto {
+          left: calc(-100% - 50px);
+        }
+        &.mode-service {
+          left: calc(100% + 100px);
+        }
+        &.active {
+          left: 0;
+        }
+      }
+    }
+    
+    .HomePage-Content__Right {
+      grid-column: 3;
+    }
+  }
+  
+  .HomePage-Footer {
+    grid-row: 3;
+    border-top: 1px solid $color-shadow;
+    background: url("danger.png");
+    padding: 5px 0 0;
+    
+    .HomePage-Footer__Overlay {
+      width: 100%;
+      height: 100%;
+      padding: 5px 20px;
+      @include insetBoxShadow;
+      background: $color-bg;
+      overflow-y: auto;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.ReadersTab {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .ReadersTab-Top {
+    flex: 0 0 200px;
+    height: 100%;
+  }
+  
+  .ReadersTab-Bottom {
+    flex: 1;
+    height: 100%;
+    margin-top: 20px;
+  }
+}

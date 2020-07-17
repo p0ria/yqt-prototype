@@ -1,0 +1,27 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.NeoServiceSensor {
+  height: 35px;
+  min-width: 100px;
+  @include boxshadow;
+  border-radius: $radius * 2;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 10px;
+  background: #213537;
+  user-select: none;
+  .NeoServiceSensor-Title {
+    flex: 1;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, .8);
+    font-size: $ruler * .95;
+    text-shadow: none;
+  }
+  
+  .NeoSensor {
+    flex: 0 0 auto;
+  }
+}

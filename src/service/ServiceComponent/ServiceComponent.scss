@@ -1,0 +1,21 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+.ServiceComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 20px 10px 20px 30px;
+  
+  .ServiceComponent-Header {
+    flex: 0 0 30px;
+    display: flex;
+  }
+  
+  .ServiceComponent-Content {
+    flex: 1;
+    padding: 20px 0;
+  }
+}

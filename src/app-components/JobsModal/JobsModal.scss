@@ -1,0 +1,75 @@
+@import "../../styles/sizes";
+@import "../../styles/colors";
+@import "../../styles/utilities";
+
+$height: 500px;
+.JobsModal {
+  width: 88%;
+  height: $height;
+  position: fixed;
+  left: 6%;
+  top: -$height;
+  z-index: 1000;
+  color: $color-white;
+  transition: top 500ms ease;
+  
+  .JobsModal-Content {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include blurBackground;
+    border-radius: 0 0 $radius $radius;
+    @include boxshadow;
+    padding: 20px;
+    transition: opacity 700ms ease;
+  }
+  
+  .JobsModal-Ticket {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    height: 30px;
+    width: 200px;
+    @include metalBackground;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    align-items: center;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    
+    .JobsModal-Ticket__Title,
+    .JobsModal-Ticket__Icon {
+      font-size: $ruler * .8;
+    }
+    
+    .JobsModal-Ticket__Title {
+      flex: 1;
+      font-weight: bold;
+    }
+    
+    .JobsModal-Ticket__Icon {
+      flex: 0 0 20px;
+      transform: translate(0);
+      transform-origin: center;
+      transition: transform 300ms ease;
+    }
+  }
+  
+  &.expanded {
+    top: 0;
+    
+    .JobsModal-Content {
+      opacity: 1;
+    }
+    
+    .JobsModal-Ticket {
+      
+      .JobsModal-Ticket__Icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
