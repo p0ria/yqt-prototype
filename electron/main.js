@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
+
 let mainWindow;
 function createWindow () {
     const startUrl = process.env.ELECTRON_START_URL || url.format({
@@ -30,3 +31,20 @@ app.on('activate', function () {
         createWindow();
     }
 });
+
+// var net = require('net');
+
+// console.log("creating connection...");
+// var client = new net.Socket();
+// client.connect(8001, '127.0.0.1', function() {
+//     console.log('Connected');
+//     client.write('Hello, server! Love, Client.');
+// });
+
+// client.on('data', function(data) {
+//     console.log('Received: ' + data);
+// });
+
+// client.on('close', function() {
+//     console.log('Connection closed');
+// });
