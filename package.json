@@ -26,11 +26,13 @@
     "react-card-flip": "^1.0.10",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "electron": "^9.1.0",
-    "electron-builder": "^22.7.0"
+    "electron-builder": "^22.7.0",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
